@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title data-i18n-key="pa.title">Field-service app | KLdev</title>
+<meta name="description" data-i18n-key="pa.desc" content="Case study: a web app by KLdev that takes a service business from quote to paid, with crew time tracking built in.">
+<meta name="theme-color" content="#171a18">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Field-service app | KLdev">
+<link rel="icon" href="../assets/favicon.svg" type="image/svg+xml">
+<link rel="preload" href="../assets/fonts/archivo.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="../assets/fonts/public-sans.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="../css/styles.css">
+</head>
+<body>
+<a class="skip" href="#main" data-i18n="skip">Skip to content</a>
+
+<header class="site-header">
+  <div class="bar wrap">
+    <a class="brand" href="../index.html" aria-label="KLdev, home">
+      <svg class="mark" viewBox="0 0 64 64" width="38" height="38" aria-hidden="true" focusable="false"><rect x="3" y="3" width="58" height="58" rx="12" fill="none" stroke="#b7e85b" stroke-width="5"/><path d="M16 20v24M30 20 17.5 32 30 44M37 20v24h11" fill="none" stroke="currentColor" stroke-width="5" stroke-linecap="square"/></svg>
+      <span class="brand-word">KL<span>dev</span></span>
+    </a>
+    <nav class="nav" id="nav" aria-label="Main">
+      <a href="../index.html#work" aria-current="page" data-i18n="nav.work">Work</a>
+      <a href="../index.html#services" data-i18n="nav.services">Services</a>
+      <a href="../index.html#process" data-i18n="nav.process">Process</a>
+      <a href="../index.html#about" data-i18n="nav.about">About</a>
+    </nav>
+    <div class="bar-actions">
+      <button class="lang" type="button" id="lang" aria-label="Cambiar a español">ES</button>
+      <a class="btn btn-small" href="../index.html#contact" data-i18n="nav.cta">Start a project</a>
+      <button class="menu-btn" type="button" id="menu-btn" aria-expanded="false" aria-controls="nav" aria-label="Menu" data-i18n-attr="aria-label:nav.menu">
+        <span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="main">
+  <section class="project-hero" id="top">
+    <div class="wrap">
+      <a class="back-link" href="../index.html#work" data-i18n="pj.back">All projects</a>
+      <p class="tile-kind project-kind" data-i18n="work.app.kind">Custom web app</p>
+      <h1 class="project-title" data-i18n="work.app.title">Field-service app</h1>
+      <p class="project-lead" data-i18n="pa.lead">One place to take a job from estimate to paid. Owners send quotes as a link, clients sign on their phone, the crew clocks in and out, and those real hours feed profit and loss.</p>
+      <dl class="meta">
+        <div><dt data-i18n="pj.m.client">Client</dt><dd data-i18n="pa.client">My own product; Lee Home Services is the first customer</dd></div>
+        <div><dt data-i18n="pj.m.role">My role</dt><dd data-i18n="pa.role">Product, design and development</dd></div>
+        <div><dt data-i18n="pj.m.stack">Stack</dt><dd data-i18n="pa.stack">Cloudflare Workers and D1, installable on phones, with end-to-end, interface and sign-in test suites</dd></div>
+        <div><dt data-i18n="pj.m.status">Status</dt><dd data-i18n="pa.status">In development with its first customer</dd></div>
+      </dl>
+      <div class="project-visual project-ui">
+        <div class="ui" aria-hidden="true">
+            <div class="ui-quote">
+              <div class="ui-head"><b data-i18n="ui.quote">Quote</b><span class="pill pill-ok" data-i18n="ui.accepted">Accepted</span></div>
+              <ul class="ui-lines">
+                <li><span data-i18n="ui.l1">Replace kitchen faucet</span><i>$185</i></li>
+                <li><span data-i18n="ui.l2">Shut-off valves, 2</span><i>$64</i></li>
+                <li class="ui-total"><span data-i18n="ui.total">Total</span><i>$249</i></li>
+              </ul>
+              <p class="ui-sign" data-i18n="ui.signed">Signed by the client on a phone</p>
+            </div>
+            <div class="ui-day">
+              <div class="ui-head"><b data-i18n="ui.today">Today</b><span class="ui-hours" data-i18n="ui.hours">Real hours: 6.5</span></div>
+              <div class="ui-job"><span data-i18n="ui.j1">Fix kitchen sink leak</span><span class="pill" data-i18n="ui.sched">Scheduled</span></div>
+              <div class="ui-job"><span data-i18n="ui.j2">Install ceiling fan</span><span class="pill pill-wait" data-i18n="ui.sent">Estimate sent</span></div>
+              <div class="ui-btn" data-i18n="ui.omw">On my way</div>
+            </div>
+            <p class="ui-note" data-i18n="ui.note">Illustration with sample data</p>
+          </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="story" aria-label="Case study">
+    <div class="wrap">
+      <div class="story-block">
+        <h2 data-i18n="pa.h1">The problem</h2>
+        <div class="story-body">
+          <p data-i18n="pa.p1">A home-repair business runs on calls and texts: quotes in one place, the schedule in someone's head, hours on paper. That makes it hard to see which jobs actually made money.</p>
+        </div>
+      </div>
+      <div class="story-block">
+        <h2 data-i18n="pa.h2">How a job moves</h2>
+        <div class="story-body">
+          <ol class="flow">
+            <li><span class="step-n" aria-hidden="true">1</span><div><h3 data-i18n="pa.s1">Quote</h3><p data-i18n="pa.s1d">Every job starts as a quote with no date. The owner sends it as a link and the client signs on a phone.</p></div></li>
+            <li><span class="step-n" aria-hidden="true">2</span><div><h3 data-i18n="pa.s2">Schedule</h3><p data-i18n="pa.s2d">The date is agreed once the client accepts, with an arrival window. Only then is the crew assigned, and the client gets a message saying who is coming and when.</p></div></li>
+            <li><span class="step-n" aria-hidden="true">3</span><div><h3 data-i18n="pa.s3">Work</h3><p data-i18n="pa.s3d">The crew only taps in and out. Location is taken at that tap, and the owner confirms they are in the right area. Only the owner decides when a job is finished.</p></div></li>
+            <li><span class="step-n" aria-hidden="true">4</span><div><h3 data-i18n="pa.s4">Close and pay</h3><p data-i18n="pa.s4d">Hours feed profit and loss. Each week the owner closes the period and every worker approves their hours. Invoices go out as a link and are marked paid by card, Zelle or check.</p></div></li>
+          </ol>
+        </div>
+      </div>
+      <div class="story-block">
+        <h2 data-i18n="pa.h3">What it covers</h2>
+        <div class="story-body">
+          <ul class="checks">
+            <li data-i18n="pa.f1">Quotes and invoices as PDFs, with each company's own logo and colors.</li>
+            <li data-i18n="pa.f2">A separate space and users for every company.</li>
+            <li data-i18n="pa.f3">Calendar and repeating jobs.</li>
+            <li data-i18n="pa.f4">Photos attached to quotes.</li>
+            <li data-i18n="pa.f5">Customer addresses confirmed on a map.</li>
+            <li data-i18n="pa.f6">Card payments through Stripe, in test mode for now.</li>
+            <li data-i18n="pa.f7">English and Spanish, installable on a phone.</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="next" aria-labelledby="next-title">
+    <div class="wrap next-grid">
+      <div>
+        <p class="next-label" id="next-title" data-i18n="pj.next">Next project</p>
+        <h2><a class="next-link" href="lee-home-services.html">Lee Home Services</a></h2>
+      </div>
+      <a class="btn" href="../index.html#contact" data-i18n="hero.cta1">Start a project</a>
+    </div>
+  </section>
+</main>
+
+<footer class="site-footer">
+  <div class="wrap foot">
+    <p>© <span id="year">2026</span> KLdev. <span data-i18n="foot.tag">Web design and app development.</span></p>
+    <p data-i18n="foot.loc">Florida, USA</p>
+    <a href="#top" data-i18n="foot.top">Back to top</a>
+  </div>
+</footer>
+
+<script src="../js/main.js" defer></script>
+</body>
+</html>

@@ -38,10 +38,10 @@ If both are empty, it opens a prefilled text message to the number in the contac
 
 ## Deploy
 
-Any static host works. On Cloudflare:
+Any static host works. On Cloudflare Workers (static assets), `wrangler.jsonc` is already set up:
 
 ```
-npx wrangler pages deploy . --project-name kldev
+npx wrangler deploy
 ```
 
-Or connect the repository to Cloudflare Pages with no build command and `/` as the output directory.
+Or connect the repository in the Cloudflare dashboard with no build command and `npx wrangler deploy` as the deploy command.
